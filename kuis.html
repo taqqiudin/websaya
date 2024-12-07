@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fungsi linier Kelas 8</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(90deg, #4a90e2, #003366);
+            padding: 1rem 0;
+            width: 100%;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background: white;
+            transition: all 0.3s;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .home {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .home p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #4a90e2;
+            color: hsl(0, 0%, 100%); /* Warna teks putih */
+            text-align: center; /* Teks di tengah */
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+        footer {
+            display: flex;
+            color: rgb(255, 255, 255); /* Warna teks putih */
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+            letter-spacing: 0.5px;
+            font-weight: 400;
+        }
+        footer p {
+            color: white !important;
+        }
+        .background-image {
+            width: 40%;
+            height: auto;
+            margin-top: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #4a90e2;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .burger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger.toggle .line2 {
+                opacity: 0;
+            }
+
+            .burger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+        /* Gaya tambahan untuk bagian materi peluang */
+        .content-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .formula {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+        }
+
+        .question {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .solution {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">fungsi linier Kelas 8</div>
+            <ul class="nav-links">
+                <li><a href="beranda 2.html"><i class="fas fa-home"></i> Beranda2</a></li>
+                <li><a href="materi.html"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="contoh soal.html"><i class="fas fa-pencil-alt"></i> Contoh Soal</a></li>
+                <li><a href="latihan soal.html"><i class="fas fa-edit"></i> Latihan soal</a></li>
+                <li><a href="geogebra.html"><i class="fas fa-edit"></i> geogebra</a></li>
+                <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <img src="gambar.jpeg" alt="gambar" class="background-image">
+
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis fungsi linier Kelas 8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .form-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        #resultContainer {
+            margin-top: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Kuis fungsi linier Kelas 8</h1>
+    <div class="form-container" id="formContainer">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" placeholder="Masukkan nama" required>
+        <label for="class">Kelas:</label>
+        <input type="text" id="class" placeholder="Masukkan kelas" required>
+        <button id="startButton">Mulai Kuis</button>
+    </div>
+
+    <div id="quizContent" style="display:none;">
+        <div class="question-container" id="questionContainer">
+            <!-- Pertanyaan akan dimuat di sini -->
+        </div>
+
+        <div class="button-container">
+            <button id="prevButton" disabled>Previous</button>
+            <button id="nextButton" disabled>Next</button>
+            <button id="submitButton" disabled>Submit</button>
+        </div>
+    </div>
+
+    <div id="resultContainer"></div>
+</div>
+
+<script>
+    const questions = [
+        {
+            question: "Manakah dari berikut ini yang merupakan bentuk umum dari fungsi linier?",
+            options: ["mx+b", "a/x+b", "2x+B", "a+b"],
+            answer: "mx+b",
+            explanation: "jawabannya mx+b."
+        },
+        {
+            question: "jika fungsi linier f(x) = 4x - 7 berapa nilai f(5)",
+            options: ["13", "12", "14", "0"],
+            answer: "13",
+            explanation: "jawaban yang bener adalah 13."
+        },
+        {
+            question: "titik A (2,3) dan B(4,7) terletak pada suatu garis .berapakah gradien dari garis tersebut ?",
+            options: ["2", "4", "1/2", "1/6"],
+            answer: "2",
+            explanation: "jadi jawabannya adalah 2"
+        },
+        {
+            question: "Jika garis melalui titik(3,2)dan memiliki gradien 5 berapakah persamaan garis tersebut?",
+            options: ["y=5x+2", "y=5x-13", "y=6x-12", "y=10x"],
+            answer: "y=5x+2",
+            explanation: "jadi jawabannya adalah y=5x+2."
+        },
+        {
+            question: "diketahui fungsi linier y = -3x +7 berapa nilai y saat x = 0?",
+            options: ["7", "-7", "1/2", "1/8"],
+            answer: "7",
+            explanation: "pada saat x = 0.y = -3 (0) +7 = 7."
+        },
+        {
+            question: "Manakah dari berikut ini yang merupakan ciri-ciri dari grafik fungsi linier?",
+            options: [" Grafiknya berbentuk parabola", "Grafiknya berbentuk garis lurus", "Grafiknya berbentuk kurva", "Grafiknya berbentuk zig-zag"],
+            answer: "Grafiknya berbentuk garis lurus",
+            explanation: "Grafik fungsi linier selalu berupa garis lurus."
+        },
+        {
+            question: "Titik P ( 1,2) dan Q ( 3,6) erletak pada sebuah garis. Berapa gradien garis yang melalui kedua titik tersebut?",
+            options: ["2", "4", "3", "1"],
+            answer: "2",
+            explanation: "Jadi jawabannya adalah 2."
+        },
+        {
+            question: "Jika gradien garis adalah 2 dan garis tersebut melalui titik(4,-1)berapa persamaan garisnya?",
+            options: ["y=2x+3", "y=2x-3", "y=2x-9", "y=2x-8"],
+            answer: "y=2x-9",
+            explanation: "jadi jawabannya adalah y=2x-9."
+        },
+        {
+            question: "Sebuah mobil bergerak dengan kecepatan konstan, yang dapat dinyatakan dengan fungsi  v (t) = 60+30 dimana v (t) adalah jarak dalam kilometer dan t  adalah waktu dalam jam. Berapa jarak yang ditempuh mobil setelah 3 jam?",
+            options: ["180 km", "210 km", "150 km", "95 km"],
+            answer: "210km",
+            explanation: "perhitungan v (3) = 60(3)+30= 180 + 30 =210."
+        },
+        {
+            question: "Persamaan garis 2x + 3y =6 memotong sumbu X di titik mana?",
+            options: ["(3,0)", "(0,3)", "(-3,0)", "(0,-3)"],
+            answer: "(3,0)",
+            explanation: "Pada sumbu (x,y)=0 substitusi kedalam persamaan :2x +3(0)=6 maka 2x=6 , x =3."
+        }
+    ];
+
+    let currentQuestionIndex = 0;
+    let answers = [];
+
+    function displayQuestion(index) {
+        const questionContainer = document.getElementById('questionContainer');
+        const questionData = questions[index];
+        questionContainer.innerHTML = `
+            <h3>Soal ${index + 1}: ${questionData.question}</h3>
+            ${questionData.options.map((option) => `
+                <label><input type="radio" name="question${index}" value="${option}"> ${option}</label>
+            `).join('')}
+        `;
+        
+        // Pastikan jawaban yang sebelumnya dipilih tetap ditampilkan
+        const selectedAnswer = answers[index];
+        if (selectedAnswer) {
+            document.querySelector(`input[name="question${index}"][value="${selectedAnswer}"]`).checked = true;
+        }
+    }
+
+    function initQuiz() {
+        const name = document.getElementById('name').value;
+        const studentClass = document.getElementById('class').value;
+
+        if (name === '' || studentClass === '') {
+            alert('Nama dan kelas harus diisi!');
+            return;
+        }
+
+        document.getElementById('formContainer').style.display = 'none';
+        document.getElementById('nextButton').disabled = false;
+        displayQuestion(currentQuestionIndex);
+        document.getElementById('quizContent').style.display = 'block';
+    }
+
+    function nextQuestion() {
+        const selectedOption = document.querySelector(`input[name="question${currentQuestionIndex}"]:checked`);
+        if (selectedOption) {
+            answers[currentQuestionIndex] = selectedOption.value;
+        }
+
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            displayQuestion(currentQuestionIndex);
+            document.getElementById('prevButton').disabled = false;
+        }
+
+        if (currentQuestionIndex === questions.length - 1) {
+            document.getElementById('nextButton').disabled = true;
+            document.getElementById('submitButton').disabled = false;
+        }
+    }
+
+    function prevQuestion() {
+        if (currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+            displayQuestion(currentQuestionIndex);
+            document.getElementById('nextButton').disabled = false;
+        }
+
+        if (currentQuestionIndex === 0) {
+            document.getElementById('prevButton').disabled = true;
+        }
+    }
+
+    function submitQuiz() {
+        const resultContainer = document.getElementById('resultContainer');
+        resultContainer.innerHTML = '';
+
+        let correctAnswers = 0;
+        answers.forEach((answer, index) => {
+            const questionData = questions[index];
+            const isCorrect = answer === questionData.answer;
+            if (isCorrect) correctAnswers++;
+        });
+
+        const score = Math.round((correctAnswers / questions.length) * 100);
+        resultContainer.innerHTML += `<strong>Skor Anda: ${score}/100</strong><br><br>`;
+
+        questions.forEach((question, index) => {
+            const answer = answers[index] || 'Tidak dijawab';
+            const isCorrect = answer === question.answer;
+            resultContainer.innerHTML += `
+                <div>
+                    <strong>Soal ${index + 1}: ${question.question}</strong><br>
+                    Jawaban Anda: ${answer} ${answer === 'Tidak dijawab' ? '' : (isCorrect ? '(Benar)' : '(Salah)')}<br>
+                    Penjelasan: ${question.explanation}
+                </div><br>
+            `;
+        });
+
+        resultContainer.innerHTML += '<button id="restartButton">Mulai Ulang Kuis</button>';
+        resultContainer.style.display = 'block';
+        document.getElementById('quizContent').style.display = 'none';
+
+        document.getElementById('restartButton').addEventListener('click', restartQuiz);
+    }
+
+    function restartQuiz() {
+        currentQuestionIndex = 0;
+        answers = [];
+        document.getElementById('formContainer').style.display = 'block';
+        document.getElementById('resultContainer').style.display = 'none';
+        document.getElementById('quizContent').style.display = 'none';
+        document.getElementById('name').value = '';
+        document.getElementById('class').value = '';
+    }
+
+    document.getElementById('startButton').addEventListener('click', initQuiz);
+    document.getElementById('nextButton').addEventListener('click', nextQuestion);
+    document.getElementById('prevButton').addEventListener('click', prevQuestion);
+    document.getElementById('submitButton').addEventListener('click', submitQuiz);
+</script>
+
+</body>
+</html>
+
+
+    <footer>
+        <p>© 2024 Materi fungsi linier Kelas 8. M.Taqqiudin.</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>
